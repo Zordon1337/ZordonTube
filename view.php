@@ -1,4 +1,11 @@
-
+<?php
+if(!isset($_POST['fullVideoName']) || empty($_POST['fullVideoName']))
+    header('Location: videos.php');
+else{
+    $fullVideoName = $_POST['fullVideoName'];
+    $onlyName = substr($fullVideoName,0,strrpos($fullVideoName,'.'));
+}
+?>
 <!doctype html>
 <html lang="en">
 <head>
