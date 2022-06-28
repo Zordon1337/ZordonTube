@@ -28,7 +28,7 @@ $(function () {
 function callTheatre(id) {
     var fullVideoName = $("#"+id).html();
     $(
-        '<form action="theatre" method="post">' +
+        '<form action="view.php" method="post">' +
             '<input type="hidden" name="fullVideoName" value="'+fullVideoName+'">'+
         '</form>'
     ).appendTo('body').submit();
