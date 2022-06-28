@@ -45,7 +45,7 @@
 </div>
 <div class="container" id="main-container">
     <div class="table-container is-hidden" id="table-container">
-        <form action="theatre" method="post">
+        <form action="view.php" method="post">
             <div class="form-group ui-widget">
                 <div class="input-group">
                     <input type="text" class="form-control" id="video" name="fullVideoName" placeholder="Search Video">
