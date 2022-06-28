@@ -1,6 +1,10 @@
 # LocalTube
 A Local Video Server for all your devices connected to same network
 
+
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+
+
 ## Pre-Requisite
 1. Local server ( e.g: apache , nginx)
 
