@@ -1,12 +1,37 @@
-<?php
-$target_dir = "videos/";
-$target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
-// Check if image file is a actual image or fake image
-if(isset($_POST["submit"])) {
-  $check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
-  if($check !== false) {
-    echo "File is an image - " . $check["mime"] . ".";
-    $uploadOk = 1;
-  } 
+<?php 
+
+$name= $_FILES['file']['name'];
+
+$tmp_name= $_FILES['file']['tmp_name'];
+
+$position= strpos($name, ".");
+
+$fileextension= substr($name, $position + 1);
+
+$fileextension= strtolower($fileextension);
+
+
+if (isset($name)) {
+
+$path= 'videos/';
+if (empty($name))
+{
+echo "Please choose a file";
+}
+else if (!empty($name)){
+if (($fileextension !== "mp4") && ($fileextension !== "ogg") && ($fileextension !== "webm"))
+{
+echo "The file extension must be .mp4, .ogg, or .webm in order to be uploaded";
+}
+
+
+else if (($fileextension == "mp4") || ($fileextension == "ogg") || ($fileextension == "webm"))
+{
+if (move_uploaded_file($tmp_name, $path.$name)) {
+echo 'Uploaded!';
+}
+}
+}
 }
 ?>
+
