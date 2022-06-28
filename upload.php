@@ -21,10 +21,12 @@
     </style>
 </head>
 <body>
-<form action="uploadprocess.php" method="post" enctype="multipart/form-data">
-  Select image to upload:
-  <input type="file" name="fileToUpload" id="fileToUpload">
-  <input type="submit" value="Upload Image" name="submit">
+    <h1>I need make css work lol</h1>
+<form action="uploadprocess.php" method='post' enctype="multipart/form-data">
+<input type="file" name="file"/><br><br>
+	<input type="submit" value="Upload"/>
 </form>
+</form>
+
 </body>
 </html>
