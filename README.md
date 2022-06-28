@@ -6,14 +6,14 @@ A Local Video Server for all your devices connected to same network
 
 ## Installation
 ```javascript
-git clone git@github.com:dipsraj/localtube.git
+git clone git@github.com:Zordon1337/Zordontube.git
 ```
 OR
 ```javascript
-git clone https://github.com/dipsraj/localtube.git
+git clone https://github.com/Zordon1337/Zordontube.git
 ```
 OR <br/>
-[**Download Zip**](https://github.com/dipsraj/localtube/archive/master.zip "Download Zip and Extract") 
+[**Download Zip**](https://github.com/Zordon1337/ZordonTube/archive/master.zip "Download Zip and Extract") 
 
 ## Usage
 1. Start your local server

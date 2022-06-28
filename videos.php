@@ -30,17 +30,17 @@ else{
 </head>
 <body>
 <nav class="navbar navbar-expand-md bg-dark navbar-dark">
-    <a class="navbar-brand" href="home">LocalTube</a>
+    <a class="navbar-brand" href="home">ZordonTube</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="collapsibleNavbar">
         <ul class="navbar-nav">
             <li class="nav-item">
-                <a class="nav-link" href="box-office">BoxOffice</a>
+                <a class="nav-link" href="videos.php">Videos</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="about">About</a>
+                <a class="nav-link" href="upload.php">Upload</a>
             </li>
         </ul>
     </div>
@@ -59,9 +59,6 @@ else{
 
 <div class="container" style="margin-top: 20px">
     <div class="card">
-        <button type="button" class="btn btn-primary" id="videoProblem">
-            Problem playing this video?
-        </button>
     </div>
 </div>
 
