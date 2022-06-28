@@ -1,11 +1,3 @@
-<?php
-if(!isset($_POST['fullVideoName']) || empty($_POST['fullVideoName']))
-    header('Location: box-office');
-else{
-    $fullVideoName = $_POST['fullVideoName'];
-    $onlyName = substr($fullVideoName,0,strrpos($fullVideoName,'.'));
-}
-?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -13,18 +5,19 @@ else{
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="assets/vendor/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/vendor/jquery-ui.css">
     <script src="assets/vendor/jquery.min.js"></script>
     <script src="assets/vendor/popper.min.js"></script>
     <script src="assets/vendor/bootstrap.min.js"></script>
-    <script src="assets/vendor/mediaelement-and-player.min.js"></script>
-    <script src="assets/vendor/core.js"></script>
-    <script src="assets/vendor/sweetalert2.all.js"></script>
-    <link rel="stylesheet" href="assets/vendor/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/vendor/mediaelementplayer.min.css">
-    <title>Theatre - LocalTube</title>
+    <script src="assets/vendor/axios.min.js"></script>
+    <title>Videos</title>
     <style>
-        a:focus{
-            outline: none !important;
+        .table-container.is-hidden{
+            display: none;
+        }
+        .table-container{
+            display: block;
         }
     </style>
 </head>
@@ -47,38 +40,35 @@ else{
 </nav>
 <div class="jumbotron jumbotron-fluid">
     <div class="container">
-        <h4><?php echo $onlyName ?></h4>
+        <h1>Videos - ZordonTube/h1>
     </div>
 </div>
-<div class="container">
-    <video controls="controls" style="width: 100%; max-width: 100%;">
-        <source type="video/mp4" src="videos/<?php echo $fullVideoName ?>" />
-        <track src="videos/<?php echo $onlyName ?>.srt" kind="captions" srclang="en" label="English">
-    </video>
-</div>
-
-<div class="container" style="margin-top: 20px">
-    <div class="card">
+<div class="container" id="main-container">
+    <div class="table-container is-hidden" id="table-container">
+        <form action="theatre" method="post">
+            <div class="form-group ui-widget">
+                <div class="input-group">
+                    <input type="text" class="form-control" id="video" name="fullVideoName" placeholder="Search Video">
+                    <div class="input-group-append">
+                        <button class="btn btn-outline-secondary" type="submit">Watch</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <div class="table-responsive" >
+            <table class="table table-dark table-hover">
+                <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Action</th>
+                </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
     </div>
 </div>
-
-<script>
-    $(function () {
-        $('video').mediaelementplayer({
-            startVolume:0.3,
-            startLanguage:'en',
-            defaultSeekBackwardInterval: function(media) {return (media.duration * 0.005);},
-            defaultSeekForwardInterval: function(media) {return (media.duration * 0.005);}
-        });
-    });
-
-    $("#videoProblem").click(function () {
-        swal({
-            type: 'info',
-            html: '<a href="videos/<?php echo $fullVideoName ?>">Download and Watch</a>',
-            showConfirmButton:false
-        })
-    });
-</script>
+<script src="assets/vendor/jquery-ui.js"></script>
+<script src="assets/js/box-office.js"></script>
 </body>
 </html>
