@@ -40,7 +40,7 @@
 </nav>
 <div class="jumbotron jumbotron-fluid">
     <div class="container">
-        <h1>Videos - ZordonTube/h1>
+        <h1>Videos - ZordonTube</h1>
     </div>
 </div>
 <div class="container" id="main-container">
