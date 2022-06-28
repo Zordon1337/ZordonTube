@@ -1,11 +1,4 @@
-<?php
-if(!isset($_POST['fullVideoName']) || empty($_POST['fullVideoName']))
-    header('Location: box-office');
-else{
-    $fullVideoName = $_POST['fullVideoName'];
-    $onlyName = substr($fullVideoName,0,strrpos($fullVideoName,'.'));
-}
-?>
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -21,7 +14,7 @@ else{
     <script src="assets/vendor/sweetalert2.all.js"></script>
     <link rel="stylesheet" href="assets/vendor/bootstrap.min.css">
     <link rel="stylesheet" href="assets/vendor/mediaelementplayer.min.css">
-    <title>Theatre - LocalTube</title>
+    <title>Videos - zordon</title>
     <style>
         a:focus{
             outline: none !important;
