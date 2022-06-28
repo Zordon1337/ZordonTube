@@ -20,11 +20,10 @@
         }
     </style>
 </head>
-<body>
-    <h1>I need make css work lol</h1>
+<body style="background-color: black;">
 <form action="uploadprocess.php" method='post' enctype="multipart/form-data">
-<input type="file" name="file"/><br><br>
-	<input type="submit" value="Upload"/>
+<input style="color: white;" type="file" name="file"/><br><br>
+	<input class="btn btn-outline-secondary" type="submit" value="Upload"/>
 </form>
 </form>
 
